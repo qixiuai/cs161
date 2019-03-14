@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<title>CS 161</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="w3-theme-brownish.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+    <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-theme-l1">CS 161</a>
+    <!-- <a href="#midterm" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Midterm</a>
+      <a href="#final" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Final</a> -->
+  </div>
+</div>
+
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5" style="z-index:3;width:250px;margin-top:43px;" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4 class="w3-bar-item"><b>CS161</b></h4>
+    <a class="w3-bar-item w3-button w3-hover-black" href="index.html">Home</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="schedule.html">Lectures</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="section.html">Sections</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="homework.html">Homework</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="exams.html">Exams</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="resources.html">Resources</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="policies.html">Policies</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="staff.html">Staff/Office Hours</a>
+  <h4 class="w3-bar-item"><b>Important Dates</b></h4>
+  <ul>
+  <li> Midterm: 2/20, in-class</li>
+  <li> Final: 3/21, 8:30am</li>
+  </ul>
+</nav>
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+
+  <div class="w3-row w3-padding-64">
+    <div class="w3-container">
+      <h1 class="w3-text-deep-orange">Exams</h1>
+      <div class="w3-card w3-sand w3-margin">
+    	<div class="w3-container w3-flat-orange">
+        <h4> Highlights </h4>
+        </div>
+        <div class="w3-container">
+      <ul>
+	      <li>There will be a <b>midterm</b> during class (10:30am-11:50am) on <b> Wednesday 2/20.</b> 
+		Location:
+		<ul>
+			<li> If your last name begins with A-R, you are in the normal classroom (NVIDIA auditorium)
+			<li> If your last name begins with N-Z, you are in McMurtry Art and Art History Building, Oshman Presentation Space, Room 102.
+		</ul>
+		</li>	
+      	<li>There will be a <b>final exam</b> 8:30am-11:30am on 3/21. </li>
+        <li> Both exams will be closed book. </li>
+        <li> You will be allowed a "cheat sheet" that <b>you have prepared yourself.</b>  For the midterm you are allowed one sheet of 8.5 x 11 paper (front and back).  For the final you are allowed two such sheets. </li>
+	<li> As promised at the beginning of the quarter, both exams will have at least one problem that is very similar to one of your homework problems. 
+      	<!--	<li> We will post practice exams here closer to the exam dates. </li>
+	<li> Information about review sessions will be posted closer to the exam dates. </li>-->
+      		</ul>
+    </div>
+     </div>
+
+	<div class="w3-card w3-sand w3-margin">
+    	<div class="w3-container w3-flat-pomegranate">
+        <h4> Midterm </h4>
+        </div>
+        <div class="w3-container">
+<p> Important info about the midterm:
+<ul>
+		<li> NOTE THE MIDTERM LOCATIONS ABOVE!  NOT EVERYONE WILL TAKE THE EXAM IN NVIDIA AUDITORIUM!
+		<li>The midterm will cover material in Lectures 1-9 (up through BFS/DFS). 
+<li> The midterm will be a closed-book exam, 80 minutes long.  You will be allowed a "cheat sheet" that you have prepared yourself (one 8.5 x 11 sheet of paper, front and back).
+	<li> Section the week of Feb. 11 will be a review session for the midterm. </li>
+</ul>
+		<p>
+		Here are some practice exams.  These are from previous quarters, so we may not cover exactly the same material or have exactly the same emphasis.  In particular we will <b>not</b> be covering Dijkstra's algorithm on our midterm this quarter.
+		<ul>
+			<li> Practice midterm 1: <a href=Exams/Midterm/practice-midterm1.pdf>Problems</a>, <a href=Exams/Midterm/practice-midterm1-sol.pdf>Solutions</a>
+			<li> Practice midterm 2: <a href=Exams/Midterm/practice-midterm2.pdf>Problems</a>, <a href=Exams/Midterm/practice-midterm2-sol.pdf>Solutions</a>
+			<li> Practice midterm 3: <a href=Exams/Midterm/practice-midterm3.pdf>Problems</a>, <a href=Exams/Midterm/practice-midterm3-sol.pdf>Solutions</a>
+		</ul>
+        </div>
+	</div>
+	<div class="w3-card w3-sand w3-margin">
+    	<div class="w3-container w3-flat-pomegranate">
+        <h4> Midterm with Solutions </h4>
+        </div>
+        <div class="w3-container">
+		<p> The midterm, with solutions, is <a href=Exams/Midterm/midterm-sols.pdf>here.</a>
+        </div>
+	</div>
+
+
+<!--
+	<div class="w3-card w3-sand w3-margin">
+    	<div class="w3-container w3-flat-pomegranate">
+        <h4> Practice Final Exams </h4>
+        </div>
+        <div class="w3-container">
+	<p> The final covers Lecture 1-16.  It will be cumulative, with an emphasis on Lectures 9-15.  (After the midterm, before the final HW).
+Expect the format to be very similar to that of the midterm.
+	<p> Here are some practice exams.  These are from previous quarters, so we may not cover exactly the same material or have exactly the same emphasis.   
+<ul>
+<li> Practice Final 1: <a href=Exams/Final/final-autumn16.pdf>Problems</a>, <a href=Exams/Final/final-autumn16-solutions.pdf>Solutions</a>
+<li> Practice Final 2: <a href=Exams/Final/w2009_no_sol.pdf>Problems</a>, please go to office hours to see a hard copy of the solutions.
+<li> More practice problems <a href=problems.pdf>from review session</a>.  (And <a href=reviewSessionSols.pdf>solution sketches</a>).
+<li> Want more practice problems?  Look back at homeworks and section!
+<li> Want even more practice problems?  Try googling "dynamic programming practice problems" or something like that :)
+</ul>
+        </div>
+	</div>
+-->
+
+<!--
+	<div class="w3-card w3-sand w3-margin">
+    	<div class="w3-container w3-flat-pomegranate">
+        <h4> Final with Solutions </h4>
+        </div>
+        <div class="w3-container">
+		<p> The final, with solutions, is <a href=Exams/Final/finalSols.pdf>here.</a>
+        </div>
+	</div> -->
+</div>
+
+  <footer id="myFooter">
+    <div class="w3-container w3-theme-l2 w3-padding-32">
+      <p> </p>
+    </div>
+
+    <div class="w3-container w3-theme-l1">
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </div>
+  </footer>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+    if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+        overlayBg.style.display = "none";
+    } else {
+        mySidebar.style.display = 'block';
+        overlayBg.style.display = "block";
+    }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+    overlayBg.style.display = "none";
+}
+</script>
+
+</body>
+</html>

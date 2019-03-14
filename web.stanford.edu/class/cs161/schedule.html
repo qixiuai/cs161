@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html>
+<title>CS 161</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="w3-theme-brownish.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+    <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-theme-l1">CS 161</a>
+        <a href="#lectures" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Lectures</a>
+        <a href="#current" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Current Lecture</a>
+    <a href="#schedule" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Schedule</a>
+  </div>
+</div>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5" style="z-index:3;width:250px;margin-top:43px;" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4 class="w3-bar-item"><b>CS161</b></h4>
+    <a class="w3-bar-item w3-button w3-hover-black" href="index.html">Home</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="schedule.html">Lectures</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="section.html">Sections</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="homework.html">Homework</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="exams.html">Exams</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="resources.html">Resources</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="policies.html">Policies</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="staff.html">Staff/Office Hours</a>
+  <h4 class="w3-bar-item"><b>Important Dates</b></h4>
+  <ul>
+  <li> Midterm: 2/20, in-class</li>
+  <li> Final: 3/21, 8:30am</li>
+  </ul>
+</nav>
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+
+ <div class="w3-row w3-padding-64">
+ 
+   <div class="w3-container">
+   <h1 class="w3-text-deep-orange"> <a id="lectures"> Lectures </a> </h1>
+
+Notes:
+<ul>
+<li> <b> Future Lectures: </b>
+   Greyed-out lectures are still in draft form and may have broken links.  (And the in-class materials for all lectures may be updated, especially for lectures that have not yet occured).
+   <li> <b> IPython notebooks: </b>
+   In most browsers, use right-click and save-as to download the .ipynb and .py files.
+    All IPython notebooks will assume you are using Python 3.
+    <li> <b> Videos: </b> Lecture videos can be found through canvas <a href="https://gocanvas.stanford.edu/gate/">here.</a>  For help, click <a href="SCPD_help.pdf">here.</a>  They can also be found on mvideox <a href="https://mvideox.stanford.edu/Course/1242">here.</a>
+    <li> <b> Reading assignments: </b> You should do the CLRS reading assignments, either before or after class, to make sure you understand details that may have been skipped during lecture.
+<p>
+There are also (optional) lecture notes available, most of which are adapted from Virginia Williams' Spring 2015 offering of CS161.  <i>These lecture notes are from a previous offering of CS161 and are not being maintained for this version of the course</i> (in particular, they are not relevant for bug bounty points), but you may use them if you find them helpful. 
+    <li> <b> What are are these things for? </b> The slides/lecture videos are the best resource for what actually happened in lecture.  The IPython Notebooks have implementation details that the slides may be missing.  The reading assignments have mathematical details the slides may be missing.  
+
+   </ul>
+
+    </div>
+    
+
+
+    
+	<div class="w3-card w3-sand w3-margin">
+    	<div class="w3-container w3-flat-pomegranate"> <!-- flat-pomegranate once it's happened -->
+        <h4> 
+         Lecture 1: Why are you here?  And do you know how to multiply integers? 
+	 (1/7)
+         </h4>
+        </div>
+        <div class="w3-container">
+      <p><b> Resources from class:</b>
+        <ul>
+            <li> <a href=Lectures/Lecture1/Lecture1.pptx>Slides (PPTX)</a></li>
+            <li> <a href=Lectures/Lecture1/Lecture1-compressed.pdf>Slides (PDF)</a></li>
+            <li><a href=Lectures/Lecture1/lecture1_karatsuba.ipynb>IPython Notebook: Karatsuba's algorithm</a> [Note: right-click and save-as to download.  (Same with all the .ipynb and .py files on this site).]</li>
+              <li> <a href=Lectures/Lecture1/multHelpers.py>auxiliary .py file for IPython Notebook</a> </li>
+            
+	<p> <b> Relevant reading: </b>
+	<li> <a href=Lectures/Lecture1/CS161Lecture01.pdf>Lecture Notes</a> (<b>optional</b> lecture notes from last year; based on Virginia Williams' lecture notes). </li>
+         </ul>
+        </div>
+	</div>    
+    
+	<div class="w3-card w3-sand w3-margin">
+    	<div class="w3-container w3-flat-pomegranate">
+        <h4> 
+		Lecture 2: MergeSort, Recurrences, and Asymptotics 
+	(1/9)
+	</h4>
+		
+        </div>
+        <div class="w3-container">
+        <p>
+        <b>Before class:</b>
+        <ul>
+        <li> <a href=Lectures/Lecture2/preLecture2.pdf>Pre-lecture exercise</a>
+        <li> The pre-lecture exercise references <a href=Lectures/Lecture2/preLecture2.ipynb>this</a> IPython notebook. [NOTE: right-click and save-as (or crtl-click and save-link-as) to download the IPython notebook (same as all .ipynb and all .py files on this site.  Be careful that you don't save it as a text file, or Jupyter won't know what to do with it.]
+        </ul>
+        <b> Resources from class:</b>
+        <ul>
+            <li> <a href=Lectures/Lecture2/Lecture2.pptx>Slides (PPTX) </a></li>
+            <li> <a href=Lectures/Lecture2/Lecture2-compressed.pdf>Slides (PDF) </a></li>
+            <li> <a href=Lectures/Lecture2/CS161Lecture02_handout.pdf>Handout: Proof that InsertionSort is Correct</a> </li>
+            <li><a href=Lectures/Lecture2/lecture2_sorting.ipynb>IPython Notebook: Insertion Sort and Merge Sort</a> </li>
+            <li> <a href=Lectures/Lecture2/tryItABunch.py>auxiliary .py file for IPython Notebook</a> </li>
+         </ul>
+         <b> Relevant reading (either before or after class, whatever works best for you): </b>
+         <ul>
+			<li> CLRS Sections 2.3 and 3.         
+	<li> <a href=Lectures/Lecture2/CS161Lecture02.pdf>Lecture Notes</a> (<b>optional</b> lecture notes from last year; based on Virginia Williams' lecture notes). </li>
+         </ul>
+        </div>
+	</div>       
+	
+		<div class="w3-card w3-sand w3-margin">
+    	<div class="w3-container w3-flat-pomegranate">
+        <h4> 
+		Lecture 3: More recurrences, the master theorem, and the substitution method  (1/14)</h4>
+        </div>
+        <div class="w3-container">
+        <p>
+        <b>Before class:</b>
+        <ul>
+        <li> <a href=Lectures/Lecture3/preLecture3.pdf>Pre-lecture exercise</a>
+        </ul>
+        <b> Resources from class:</b>
+        <ul>
+		<!--<li> <a href=Lectures/Lecture3/CS161Lecture03.pdf>Lecture Notes</a> </li>-->
+            <li> <a href=Lectures/Lecture3/Lecture3.pptx>Slides (PPTX) </a></li>
+            <li> <a href=Lectures/Lecture3/Lecture3-compressed.pdf>Slides (PDF) </a></li>
+         </ul>
+         <b> Relevant reading (either before or after class, whatever works best for you): </b>
+         <ul>
+			<li> CLRS Sections 4.3-4.5.         
+	<li> <a href=Lectures/Lecture3/CS161Lecture03.pdf>Lecture Notes</a> (<b>optional</b> lecture notes from last year; based on Virginia Williams' lecture notes). </li>
+         </ul>
+        </div>
+	</div>
+		<div class="w3-card w3-sand w3-margin">
+    	<div class="w3-container w3-flat-pomegranate">
+        <h4> 
+	Lecture 4: More substitution method and the selection problem (1/17)</h4>
+        </div>
+        <div class="w3-container">
+        <p>
+        <b>Before class:</b>
+        <ul>
+        <li> <a href=Lectures/Lecture4/preLecture4.pdf>Pre-lecture exercise</a>
+        </ul>
+        <b> Resources from class:</b>
+        <ul>
+ <!--           <li> <a href=Lectures/Lecture4/CS161Lecture04.pdf>Lecture Notes</a> </li>-->
+            <li> <a href=Lectures/Lecture4/Lecture4.pptx>Slides (PPTX) </a></li>
+            <li> <a href=Lectures/Lecture4/Lecture4-compressed.pdf>Slides (PDF) </a></li>
+           <li><a href=Lectures/Lecture4/lecture4.ipynb>IPython Notebook: Select algorithm</a> </li>
+            <li> <a href=Lectures/Lecture4/auxFileLecture4.py>auxiliary .py file for IPython Notebook</a> </li>
+	    <li> <a href=Lectures/Lecture4/CS161_handout_lecture4.pdf>Handout: formal proof that SELECT(A,k) is correct</a> </li>
+         </ul>
+         <b> Relevant reading (either before or after class, whatever works best for you): </b>
+         <ul>
+			<li> CLRS Chapter 9        
+	<li> <a href=Lectures/Lecture4/CS161Lecture04.pdf>Lecture Notes</a> (<b>optional</b> lecture notes from last year; based on Virginia Williams' lecture notes). </li>
+         </ul>
+        </div>
+	</div>        
+		
+	<div class="w3-card w3-sand w3-margin">
+    	<div class="w3-container w3-flat-pomegranate">
+        <h4> 
+Lecture 5: Randomized Algorithms and QuickSort (1/23)</h4>
+        </div>
+        <div class="w3-container">
+        <p>
+        <b>Before class:</b>
+        <ul>
+        <li> <a href=Lectures/Lecture5/preLecture5.pdf>Pre-lecture exercise</a>
+        </ul>
+        <b> Resources from class:</b>
+        <ul>
+		<!--<li> <a href=Lectures/Lecture5/CS161Lecture05.pdf>Lecture Notes</a> </li>-->
+            <li> <a href=Lectures/Lecture5/Lecture5.pptx>Slides (PPTX) </a></li>
+            <li> <a href=Lectures/Lecture5/Lecture5-compressed.pdf>Slides (PDF) </a></li>
+           <li><a href=Lectures/Lecture5/lecture5_quicksort.ipynb>IPython Notebook: QuickSort</a> </li>
+            <li> <a href=Lectures/Lecture5/auxFileLecture5.py>auxiliary .py file for IPython Notebook</a> </li>
+         </ul>
+         <b> Relevant reading (either before or after class, whatever works best for you): </b>
+         <ul>
+			<li> CLRS Chapter 7 and 5.1,5.2,5.3. 
+	<li> <a href=Lectures/Lecture5/CS161Lecture05.pdf>Lecture Notes</a> (<b>optional</b> lecture notes from last year; based on Virginia Williams' lecture notes). </li>
+         </ul>
+        </div>
+	</div>        
+        
+	<div class="w3-card w3-sand w3-margin">
+    	<div class="w3-container w3-flat-pomegranate">
+        <h4> 
+		Lecture 6: BucketSort, RadixSort, and Sorting Lower Bounds (1/28)</h4>
+        </div>
+        <div class="w3-container">
+        <p>
+        <b>Before class:</b>
+        <ul>
+        <li> <a href=Lectures/Lecture6/preLecture6.pdf>Pre-lecture exercise</a>
+        </ul>
+        <b> Resources from class:</b>
+        <ul>
+		<!--           <li> <a href=Lectures/Lecture6/CS161Lecture06.pdf>Lecture Notes</a> </li>-->
+            <li> <a href=Lectures/Lecture6/Lecture6.pptx>Slides (PPTX) </a></li>
+            <li> <a href=Lectures/Lecture6/Lecture6-compressed.pdf>Slides (PDF) </a></li>
+           <li><a href=Lectures/Lecture6/lecture6_bucketSort.ipynb>IPython Notebook: RadixSort</a> </li>
+            <li> <a href=Lectures/Lecture6/lecture6_aux.py>auxiliary .py file for IPython Notebook</a> </li>
+         </ul>
+         <b> Relevant reading (either before or after class, whatever works best for you): </b>
+         <ul>
+			<li> CLRS Sections 8.1-8.2
+				<li> <a href="http://www.cs.cmu.edu/~avrim/451f11/lectures/lect0913.pdf">Avrim Blum's notes on sorting lower bounds.</a>
+	<li> <a href=Lectures/Lecture6/CS161Lecture06.pdf>Lecture Notes</a> (<b>optional</b> lecture notes from last year; based on Virginia Williams' lecture notes). </li>
+         </ul>
+        </div>
+	</div>        
+	
+	<div class="w3-card w3-sand w3-margin">
+    	<div class="w3-container w3-flat-pomegranate">
+		<h4> Lecture 7: Binary Search Trees and Red-Black Trees (1/30)</h4> 
+        </div>
+        <div class="w3-container">
+        <p>
+        <b>Before class:</b>
+        <ul>
+        <li> <a href=Lectures/Lecture7/preLecture7.pdf>Pre-lecture exercise</a>
+<!--
+        <li> <a href=Lectures/Lecture7/preLecture7_sols.pdf>Pre-lecture exercise solutions</a>-->
+        </ul>
+        <b> Resources from class:</b>
+        <ul>
+            <li> <a href=Lectures/Lecture7/Lecture7.pptx>Slides (PPTX) </a></li>
+            <li> <a href=Lectures/Lecture7/Lecture7-compressed.pdf>Slides (PDF) </a></li>
+         </ul>
+         <b> Relevant reading (either before or after class, whatever works best for you): </b>
+         <ul>
+			<li> CLRS 12.1, 12.2, 12.3, Ch. 13.
+	<li> <a href=Lectures/Lecture7/CS161Lecture07.pdf>Lecture Notes</a> (<b>optional</b> lecture notes from last year; based on Virginia Williams' lecture notes). </li>
+         </ul>
+        </div>
+	</div>        
+	
+	<div class="w3-card w3-sand w3-margin">
+    	<div class="w3-container w3-flat-pomegranate">
+		<h4> Lecture 8: Hashing! (2/4)</h4> 
+        </div>
+        <div class="w3-container">
+        <p> Special guest lecturer: Greg Valiant!
+	<p>
+        <b>Before class:</b>
+        <ul>
+        <li> (No pre-lecture exercise today). 
+        </ul>
+        <b> Resources from class:</b>
+        <ul>
+            <li> <a href=Lectures/Lecture8/Lecture8.pptx>Slides (PPTX) </a></li>
+            <li> <a href=Lectures/Lecture8/Lecture8-compressed.pdf>Slides (PDF) </a></li>
+            <li><a href=Lectures/Lecture8/Lecture8_hashing.ipynb>IPython Notebook: Hashing</a> </li>
+         </ul>
+         <b> Relevant reading (either before or after class, whatever works best for you): </b>
+         <ul>
+			<li> CLRS Ch. 11.
+	<li> <a href=Lectures/Lecture8/CS161Lecture08.pdf>Lecture Notes</a> (<b>optional</b> lecture notes from last year; based on Virginia Williams' lecture notes). </li>
+         </ul>
+        </div>
+	</div>        
+	
+	<div class="w3-card w3-sand w3-margin">
+    	<div class="w3-container w3-flat-pomegranate">
+		<h4> Lecture 9: Graphs, BFS and DFS (2/6)</h4> 
+        </div>
+        <div class="w3-container">
+        <p>
+        <b>Before class:</b>
+        <ul>
+        <li> <a href=Lectures/Lecture9/preLecture9.pdf>Pre-lecture exercise.</a> 
+        </ul>
+        <b> Resources from class:</b>
+        <ul>
+            <li> <a href=Lectures/Lecture9/Lecture9.pptx>Slides (PPTX) </a></li>
+            <li> <a href=Lectures/Lecture9/Lecture9-compressed.pdf>Slides (PDF) </a></li>
+            <li><a href=Lectures/Lecture9/lecture9_graphs.ipynb>IPython Notebook: Graphs</a> </li>
+         </ul>
+         <b> Relevant reading (either before or after class, whatever works best for you): </b>
+         <ul>
+			<li> CLRS Ch. 22.1-22.4.
+	<li> <a href=Lectures/Lecture9/CS161Lecture09.pdf>Lecture Notes</a> (<b>optional</b> lecture notes from last year; based on Virginia Williams' lecture notes). </li>
+         </ul>
+        </div>
+	</div>        
+	
+	<div class="w3-card w3-sand w3-margin">
+    	<div class="w3-container w3-flat-pomegranate">
+		<h4> Lecture 10: Finding Strongly Connected Components (2/11)</h4> 
+        </div>
+        <div class="w3-container">
+        <p>
+        <b>Before class:</b>
+        <ul>
+        <li> <a href=Lectures/Lecture10/preLecture10.pdf>Pre-lecture exercise</a> 
+        </ul>
+        <b> Resources from class:</b>
+        <ul>
+            <li> <a href=Lectures/Lecture10/Lecture10.pptx>Slides (PPTX) </a></li>
+            <li> <a href=Lectures/Lecture10/Lecture10-compressed.pdf>Slides (PDF) </a></li>
+            <li><a href=Lectures/Lecture10/lecture10_scc.ipynb>IPython Notebook: SCC</a> </li>
+	   <li> <a href=Lectures/Lecture10/graphStuff.py>auxiliary .py file for IPython Notebook</a> </li> 
+         </ul>
+         <b> Relevant reading (either before or after class, whatever works best for you): </b>
+         <ul>
+			<li> CLRS Ch. 22.5.
+	<li> <a href=Lectures/Lecture10/CS161Lecture10.pdf>Lecture Notes</a> (<b>optional</b> lecture notes from last year; based on Virginia Williams' lecture notes). </li>
+         </ul>
+        </div>
+	</div>        
+	
+	<div class="w3-card w3-sand w3-margin">
+    	<div class="w3-container w3-flat-pomegranate">
+		<h4> Lecture 11: Dijkstra's Algorithm and Bellman-Ford (2/13)</h4> 
+        </div>
+        <div class="w3-container">
+        <p>
+        <b>Before class:</b>
+        <ul>
+        <li> <a href=Lectures/Lecture11/preLecture11.pdf>Pre-lecture exercise</a> 
+        </ul>
+        <b> Resources from class:</b>
+        <ul>
+            <li> <a href=Lectures/Lecture11/Lecture11.pptx>Slides (PPTX) </a></li>
+            <li> <a href=Lectures/Lecture11/Lecture11-compressed.pdf>Slides (PDF) </a></li>
+            <li><a href=Lectures/Lecture11/lecture11_dijkstra.ipynb>IPython Notebook: Dijkstra</a> </li>
+	   <li> <a href=Lectures/Lecture11/graphStuff.py>auxiliary .py file for IPython Notebook</a> </li> 
+         </ul>
+         <b> Relevant reading (either before or after class, whatever works best for you): </b>
+         <ul>
+			<li> CLRS Ch. 24.1, 24.3.
+	<li> <a href=Lectures/Lecture11/CS161Lecture11.pdf>Lecture Notes</a> (<b>optional</b> lecture notes from last year; based on Virginia Williams' lecture notes). </li>
+         </ul>
+        </div>
+	</div>        
+	
+	<div class="w3-card w3-sand w3-margin">
+    	<div class="w3-container w3-flat-pomegranate">
+		<h4> Lecture 12: Dynamic Programming and shortest paths: Bellman-Ford and Floyd-Warshall (2/25) </h4> 
+        </div>
+        <div class="w3-container">
+        <p>
+        <b>Before class:</b>
+        <ul>
+	<a href=Lectures/Lecture12/preLecture12.pdf>Pre-lecture exercise</a> 
+        </ul>
+        <b> Resources from class:</b>
+        <ul>
+            <li> <a href=Lectures/Lecture12/Lecture12.pptx>Slides (PPTX) </a></li>
+            <li> <a href=Lectures/Lecture12/Lecture12-compressed.pdf>Slides (PDF) </a></li>
+            <li><a href=Lectures/Lecture12/lecture12_dp.ipynb>IPython Notebook: computing Fibonacci numbers</a> </li>
+         </ul>
+         <b> Relevant reading (either before or after class, whatever works best for you): </b>
+         <ul>
+			<li> CLRS Ch. 25.2, 15.1.
+	<li> <a href=Lectures/Lecture12/CS161Lecture12.pdf>Lecture Notes</a> (<b>optional</b> lecture notes from last year; based on Virginia Williams' lecture notes). </li>
+         </ul>
+        </div>
+	</div>        
+	
+	<div class="w3-card w3-sand w3-margin">
+    	<div class="w3-container w3-flat-pomegranate">
+		<h4> Lecture 13: More dynamic programming (2/27)  </h4> 
+        </div>
+        <div class="w3-container">
+        <p>
+        <b>Before class:</b>
+        <ul>
+		(No pre-lecture exercise today!)
+        </ul>
+        <b> Resources from class:</b>
+        <ul>
+            <li> <a href=Lectures/Lecture13/Lecture13.pptx>Slides (PPTX) </a></li>
+            <li> <a href=Lectures/Lecture13/Lecture13-compressed.pdf>Slides (PDF) </a></li>
+         </ul>
+         <b> Relevant reading (either before or after class, whatever works best for you): </b>
+         <ul>
+			<li> CLRS Ch. 15.4
+	<li> <a href=Lectures/Lecture13/CS161Lecture13.pdf>Lecture Notes</a> (<b>optional</b> lecture notes from last year; based on Virginia Williams' lecture notes). </li>
+         </ul>
+        </div>
+	</div>        
+	
+<div class="w3-card w3-sand w3-margin">
+    	<div class="w3-container w3-flat-pomegranate">
+		<h4> Lecture 14: Greedy Algorithms  (3/4) </h4> 
+        </div>
+        <div class="w3-container">
+        <p>
+        <b>Before class:</b>
+        <ul>
+	<a href=Lectures/Lecture14/preLecture14.pdf>Pre-lecture exercise</a>
+        </ul>
+        <b> Resources from class:</b>
+        <ul>
+            <li> <a href=Lectures/Lecture14/Lecture14.pptx>Slides (PPTX) </a></li>
+            <li> <a href=Lectures/Lecture14/Lecture14-compressed.pdf>Slides (PDF) </a></li>
+            <li><a href=Lectures/Lecture14/lecture14_greedy.ipynb>IPython Notebook: Activity Selection</a> </li>
+         </ul>
+         <b> Relevant reading (either before or after class, whatever works best for you): </b>
+         <ul>
+			<li> CLRS Ch. 16.1, 16.2, 16.3
+	<li> <a href=Lectures/Lecture14/CS161Lecture14.pdf>Lecture Notes</a> (<b>optional</b> lecture notes from last year; based on Virginia Williams' lecture notes). </li>
+         </ul>
+        </div>
+	</div>        
+
+<div class="w3-card w3-sand w3-margin">
+    	<div class="w3-container w3-flat-orange">
+		<h4> Lecture 15: Minimum Spanning Trees (3/6)</h4> 
+		<a id = "current">
+        </div>
+        <div class="w3-container">
+        <p>
+        <b>Before class:</b>
+        <ul>
+	<a href=Lectures/Lecture15/preLecture15.pdf>Pre-lecture exercise</a>
+        </ul>
+        <b> Resources from class:</b>
+        <ul>
+            <li> <a href=Lectures/Lecture15/Lecture15.pptx>Slides (PPTX) </a></li>
+            <li> <a href=Lectures/Lecture15/Lecture15-compressed.pdf>Slides (PDF) </a></li>
+            <li><a href=Lectures/Lecture15/lecture15_mst.ipynb>IPython Notebook: MST</a> </li>
+	   <li> <a href=Lectures/Lecture15/graphStuff.py>auxiliary .py file for IPython Notebook</a> </li> 
+         </ul>
+         <b> Relevant reading (either before or after class, whatever works best for you): </b>
+         <ul>
+			<li> CLRS Ch. 23
+	<li> <a href=Lectures/Lecture15/CS161Lecture15.pdf>Lecture Notes</a> (<b>optional</b> lecture notes from last year; based on Virginia Williams' lecture notes). </li>
+         </ul>
+        </div>
+	</div>        
+    
+<div class="w3-card w3-light-gray w3-margin">
+    	<div class="w3-container w3-dark-gray">
+		<h4> Lecture 16: Minimum Cuts and Karger's Algorithm (3/11) </h4> 
+        </div>
+        <div class="w3-container">
+        <p>
+        <b>Before class:</b>
+        <ul>
+	<li> <a href=Lectures/Lecture16/preLecture16.pdf>Pre-lecture exercise</a>
+        </ul>
+        <b> Resources from class:</b>
+        <ul>
+            <li> <a href=Lectures/Lecture16/Lecture16.pptx>Slides (PPTX) </a></li>
+            <li> <a href=Lectures/Lecture16/Lecture16-compressed.pdf>Slides (PDF) </a></li>
+            <li><a href=Lectures/Lecture16/lecture16_karger.ipynb>IPython Notebook: Karger's Algorithm</a> </li>
+	   <li> <a href=Lectures/Lecture16/graphStuff.py>auxiliary .py file for IPython Notebook</a> </li> 
+         </ul>
+         <b> Relevant reading (either before or after class, whatever works best for you): </b>
+         <ul>
+			<li> Kleinberg and Tardos Section 13.2 (<a href=Lectures/Lecture16/KT_mincut_reading.pdf>here</a>)
+	<li> <a href=Lectures/Lecture16/CS161Lecture16.pdf>Lecture Notes</a> (<b>optional</b> lecture notes from last year; based on Virginia Williams' lecture notes). </li>
+         </ul>
+        </div>
+	</div>        
+
+ <!--
+<div class="w3-card w3-light-gray w3-margin">
+    	<div class="w3-container w3-dark-gray">
+		<h4> Lecture 17: Max Flow and the Ford-Fulkerson Algorithm </h4> 
+        </div>
+        <div class="w3-container">
+        <p>
+        <b>Before class:</b>
+        <ul>
+	<li><a href=Lectures/Lecture17/preLecture17.pdf>Pre-lecture exercise</a>
+        </ul>
+        <b> Resources from class:</b>
+        <ul>
+            <li> <a href=Lectures/Lecture17/CS161Lecture17.pdf>Lecture Notes</a> </li>
+            <li> <a href=Lectures/Lecture17/Lecture17.pptx>Slides (PPTX) </a></li>
+            <li> <a href=Lectures/Lecture17/Lecture17-compressed.pdf>Slides (PDF) </a></li>
+         </ul>
+         <b> Relevant reading (either before or after class, whatever works best for you): </b>
+         <ul>
+			<li> CLRS Ch. 26.1, 26.2, 26.3 
+         </ul>
+        </div>
+	</div>        
+ -->
+<div class="w3-card w3-light-gray w3-margin">
+    	<div class="w3-container w3-dark-gray">
+		<h4> Lecture 17: What's next? (3/13) </h4> 
+        </div>
+        <div class="w3-container">
+        <p>
+        <b>Before class:</b>
+        <ul>
+	<li> N/A
+        </ul>
+        <b> Resources from class:</b>
+        <ul>
+            <li> <a href=Lectures/Lecture18/Lecture17.pptx>Slides (PPTX) </a></li>
+            <li> <a href=Lectures/Lecture18/Lecture17-compressed.pdf>Slides (PDF) </a></li>
+         </ul>
+         <b> Relevant reading (either before or after class, whatever works best for you): </b>
+         <ul>
+			<li> N/A 
+         </ul>
+        </div>
+	</div>        
+
+
+
+    <div class="w3-container">
+      <h1 class="w3-text-deep-orange"> <a id="schedule"> Schedule </a> </h1>
+      <h5>(The future is mutable).</h5>
+    </div>
+
+
+	<table class="w3-table-all">
+	<tr class="w3-deep-orange">
+	  <th>Monday</th>
+	  <th>Wednesday</th>
+	  <th>Friday</th>
+	</tr>
+	
+	<tr>
+	  <td> 1/7. Lecture 1: Why are you here? </td>
+	  <td> 1/9. Lecture 2: MergeSort and Asymptotics (Ch. 2.3 and 3)</td>
+	  <td> 1/11. Homework 1 Assigned </td> 
+	</tr>	
+	
+		<tr>
+	  <td> 1/14. Lecture 3: Solving Recurrences and the Master Theorem (Ch. 4.3-4.5) </td>
+	  <td> 1/16. Lecture 4: Median and Selection (Ch. 9)</td>
+	  <td> 1/18. Homework 1 Due; Homework 2 Assigned </td> 
+	</tr>	
+	
+		<tr>
+	  <td> 1/21. MLK Day. No class.
+	  <td> 1/23. Lecture 5: Randomized Algorithms and QuickSort (Ch 7, 5.1,5.2,5.3)</td>
+	  <td> 1/25. Homework 2 Due. (No homework since we haven't covered enough new stuff). </td> 
+	</tr>	
+	
+    <tr>
+	  <td> 1/28. Lecture 6: BucketSort and Lower Bounds for Sorting (Ch. 8.1,8.2)</td>
+	  <td> 1/30. Lecture 7: Binary Search Trees and Red-Black Trees (Ch. 12.1, 12.2, 12.3, 13)</td>
+	  <td> 2/1. Homework 3 Assigned. </td> 
+	</tr>	
+	
+    <tr>
+	  <td> 2/4. Lecture 8: Hashing (Ch. 11)</td>
+	  <td> 2/6. Lecture 9: Graphs and BFS and DFS (Ch. 22.1-22.4)</td>
+	  <td> 2/8. Homework 3 Due; Homework 4 Assigned </td> 
+	</tr>	
+	
+    <tr>
+	  <td> 2/11. Lecture 10: Strongly Connected Components (Ch. 22.5)</td>
+	  <td> 2/13. Lecture 11: Dijkstra and Bellman-Ford (Ch. 24.1, 24.3)</td>
+	  <td> 2/15. Homework 4 Due; No homework assigned (study for midterm!) </td> 
+	</tr>	
+	
+   <tr>
+	 <td> 2/18. President's Day; No class.
+	  <td> 2/20.  MIDTERM </td>
+	  <td> 2/22.  Homework 5 Assigned. </td> 
+	</tr>	
+
+	<tr>
+	  <td> 2/25. Lecture 12: Dynamic Programming: Bellman-Ford (again) and Floyd-Warshall (Ch. 25.2, 15.1)</td>
+	  <td> 2/27. Lecture 13: More dynamic programming: LCS, Knapsack, Independent Set (Ch. 15.4)</td>
+	<td> 3/1. Homework 5 due; Homework 6 Assigned
+	</tr>	
+
+
+	 <tr>
+	  <td> 3/4. Lecture 14: Greedy Algorithms (Ch. 16.1, 16.2, 16.3)</td>
+	  <td> 3/6. Lecture 15: Minimum Spanning Trees (Ch. 23)</td>
+	  <td> 3/8.  Homework 6 Due; Homework 7 assigned. </td> 
+	</tr>	
+	
+	
+	<tr>
+	  <td> 3/11. Lecture 16: Min Cuts and Karger's algorithm (Kleinberg and Tardos 13.2 (posted))</td>  
+	  <td> 3/13. Lecture 17: What's next? </td>
+	  <td> 3/15.  Homework 7 Due </td> 
+	</tr>
+	
+	
+	</table>
+
+
+<p>  </p>
+
+  <footer id="myFooter">
+    <div class="w3-container w3-theme-l2 w3-padding-32">
+      <p> </p>
+    </div>
+
+    <div class="w3-container w3-theme-l1">
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </div>
+  </footer>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+    if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+        overlayBg.style.display = "none";
+    } else {
+        mySidebar.style.display = 'block';
+        overlayBg.style.display = "block";
+    }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+    overlayBg.style.display = "none";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<title>CS 161</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="w3-theme-brownish.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-theme-l1">CS 161</a>
+          <a href="http://piazza.com/stanford/winter2019/cs161" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Piazza</a>
+     <a href="https://searchworks.stanford.edu/view/8234900" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Textbook</a>
+
+  </div>
+</div>
+
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5" style="z-index:3;width:250px;margin-top:43px;" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4 class="w3-bar-item"><b>CS161</b></h4>
+    <a class="w3-bar-item w3-button w3-hover-black" href="index.html">Home</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="schedule.html">Lectures</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="section.html">Sections</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="homework.html">Homework</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="exams.html">Exams</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="resources.html">Resources</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="policies.html">Policies</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="staff.html">Staff/Office Hours</a>
+  <h4 class="w3-bar-item"><b>Important Dates</b></h4>
+  <ul>
+  <li> Midterm: 2/20, in-class</li>
+  <li> Final: 3/21, 8:30am</li>
+  </ul>
+</nav>
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+
+  <div class="w3-row w3-padding-64">
+    <div class="w3-container">
+      <h1 class="w3-text-deep-orange">Resources</h1> 
+    </div>
+    
+    	<div class="w3-card w3-sand w3-margin">
+    	<div class="w3-container w3-flat-pomegranate">
+        <h4> Piazza </h4>
+        </div>
+        <div class="w3-container">
+                 <p> Sign up for Piazza <a href="http://piazza.com/stanford/winter2019/cs161">here</a>
+                 <ul>
+                    <li> We will try to answer questions in a timely fashion; but be aware that we have to sleep too. (Do <b>NOT</b> count on Piazza for last-minute homework help!!!)</li>
+                 	<li> You can answer your peers' questions!  That would be awesome!</li>
+         
+                 </ul>
+                
+        </div>
+	</div>
+
+	<div class="w3-card w3-sand w3-margin">
+    	<div class="w3-container w3-flat-pomegranate">
+        <h4> Textbooks </h4>
+        </div>
+        <div class="w3-container">
+                 <p>Main textbook: CLRS. 
+                 <ul>
+                    <li> Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein, Introduction to Algorithms, 3rd Edition, MIT Press.</li>
+                 	<li> This book is <a href="https://searchworks.stanford.edu/view/12846639">available online</a> for free through the stanford library.</li>
+                 </ul>
+                 <p> You might also find the following textbooks to be helpful references:
+                 <ul>
+			 <li>Jon Kleinberg, Éva Tardos: <b>Algorithm Design</b></li>
+			 <li>Sanjoy Dasgupta, Christos Papadimitriou, Umesh Vazirani: <b>Algorithms</b></li>
+			 <li>Tim Roughgarden: <b>Algorithms Illuminated.</b>  This great series of books also has many resources that go along with it that you might find helpful, including video lectures; you can find those <a href="http://www.algorithmsilluminated.org/">here</a>.</li>
+                 </ul>
+        </div>
+	</div>
+	
+		<div class="w3-card w3-sand w3-margin">
+    	<div class="w3-container w3-flat-pomegranate">
+        <h4> LaTeX Resources </h4>
+        </div>
+        <div class="w3-container">
+                 <p> We strongly recommend typesetting solutions to homework sets in LaTeX.  LaTeX is the standard for typesetting CS/math/etc papers, and will likely come in handy outside CS161.
+                 <ul>
+ 		<li> <b> Example LaTeX solution set: </b> See the <a href=#homework>Homework Resources</a> section below for an example of a LaTeX'd solution set and a LaTeX template.  These solutions include examples of pseudocode in a few different environments, as well as examples of how to include images and figures.
+                    <li> <b> Guides to using LaTeX: </b> An introduction to LaTeX can be found <a href="https://tobi.oetiker.ch/lshort/lshort.pdf">here</a>.  Other guides can be found at <a href="https://en.wikibooks.org/wiki/LaTeX">Wikibooks</a> 
+                    and <a href="http://www.cs.nyu.edu/~khot/latex/">NYU.</a>
+
+                 	<li> <b> Online Environments:</b> If you don't want to install LaTeX, <a href="https://www.sharelatex.com/">ShareLaTeX</a> and <a href="https://www.overleaf.com/">Overleaf</a> are online environments which compile 
+                 	previews of your LaTeX documents as you type.  (They also allow you to share your LaTeX with others; but of course you <a href=policies.html>won't be needing</a> that feature for this class!)  Stanford students get a free OverLeaf Pro account.
+						<li> <b> LaTeX Editors: </b> There are many LaTeX editors which
+            allow you to use GUI to edit your LaTeX.  <a href="http://lyx.org">LyX</a> is a free one.  
+						<li> <b> Finding symbols: </b> <a href="http://detexify.kirelabs.org/classify.html">Detexify</a> lets you draw the symbol that you are looking for and get LaTeX code.
+						A static guide is <a href="https://ctan.org/tex-archive/info/symbols/comprehensive/">here</a>.          
+                 </ul>
+               
+        </div>
+	</div>
+	
+			<div class="w3-card w3-sand w3-margin">
+    	<div class="w3-container w3-flat-pomegranate">
+        <h4> Python Resources </h4>
+        </div>
+        <div class="w3-container">
+                 <p> We'll be using a little bit of Python in CS161.  It won't
+                 be too intense, but here are some resources to help you get
+                 familiar with Python if you haven't seen it before.  
+
+                 <ul>
+		    <li> <b> Python 2 vs. Python 3. </b>  All examples and homework files in this class <b> will be using Python 3 </b>, which differs from Python 2 in a few important ways.  (For example, integer division works differently).  
+<a
+                 href="http://sebastianraschka.com/Articles/2014_python_2_3_key_diff.html">Here
+                 is a list of differences between Python 2 and Python 3.</a>
+                    <li> <b> Documentation: </b> Python documentation is <a href="http://ipython.readthedocs.io/en/stable/">here</a>.
+                    <li> <b> Tutorials: </b> A good tutorial for Python can be found <a href="https://www.programiz.com/python-programming">here</a>
+  	                  <li> <b> In-line help: </b> In the prompt in the Jupyter Notebook, if you type "help(x)" it will display a help page for x.
+                      <li><b>Jupyter:</b> 
+			The <a href=Lectures/Lecture2/preLecture2.pdf>pre-class exercise</a> for Lecture 2 gives some info about how to install Jupyter with Python 3.  <b>tl;dr</b>: Here is the <a
+                      href="https://jupyter.readthedocs.io/en/latest/">Jupyter</a>
+                      documentation, which tells you how to install Jupyter
+                      notebooks.  Please install Python 3.
+                 	  <li> <b> Have Python resources that you like? </b> Let us know and we'll add them here!  
+                 </ul>
+               
+        </div>
+	</div>
+	
+			<div class="w3-card w3-sand w3-margin">
+    	<div class="w3-container w3-flat-pomegranate">
+        <h4 id="homework"> Homework Resources </h4>
+        </div>
+        <div class="w3-container">
+        <ul> 
+	<li> <b> Guidelines: </b>
+         One of the big skills you'll be developing in CS161 is how to <b> communicate </b> technical material clearly.  To that end, we expect homework sets in CS161 to be clear, and easily human-readable.  Think of them like memos you might write to a colleague. 
+        Better still, think of them as memos that you might write for a team of colleagues, who may be working quickly and also who have control over your grade.
+       <p> Your homeworks should be typed and clearly written with complete sentences and well-organized logic, and should definitely not be your first draft.
+       <p> When we ask for pseudocode, we are expecting pseudocode that is clear enough that a CS106B student (and certainly the grader) can understand what your algorithm is doing, and could implement it in a language of their choice, without thinking too hard.  It is good practice to include an English description of what your pseudocode is doing, to help out the reader.  See the example homework before for good and bad examples of pseudocode.
+
+        <li> <b> Example HW: </b> 
+	To help you get an idea of what we are expecting,  
+            <a href="Homework/Homework0/HW0.zip">here</a> is an example of an appropriate solution to a CS161 homework set (a zip file that contains the PDF and LaTeX source, along with the files for the original problem set.)
+           <li> <b> HW Tips: </b>
+           <ul>
+           		<li> Look at the example above for style advice.
+           		<li> Try to put yourself in the position of the reader.  If you hadn't just been thinking about this problem for two hours, would your answer make sense to you?
+           		<li> The homework questions will always end with a text block explaining what sort of answer we expect.  Read this text block carefully.
+           		<li> Start the homework early.
+           		<li> Try to "finish" the homework early, step away from it for a day, and then come back to it and read it over again.  Chances are, you'll find some way to write what you've written more clearly.
+           		<li> If you get stuck, then ask for help from the course staff: come to office hours prepared to explain what you have tried, and why you are stuck.
+           </ul>
+
+	<li> Homework Template: If you don't want the full-blown example homework above, <a href=Homework/HW_template.tex>here's</a> a bare-bones LaTeX template you can use.  We will also post the PSET source code so you can borrow LaTeX code from the problem statements.
+            </ul>
+        </div>
+
+	</div>
+		<div class="w3-card w3-sand w3-margin">
+    	<div class="w3-container w3-flat-pomegranate">
+        <h4 id="other"> SCPD Resources</h4>
+        </div>
+        <div class="w3-container">
+       <ul>
+       <li> Reyna's section on Thursday afternoons will be recorded and you can access the videos wherever you access the lecture videos.
+	<li> Maxime will be holding online office hours via Zoom.  Please see <a href="staff.html">here</a> for the schedule.  To connect to online office hours, follow these instructions:
+<ul>
+<li> 1) Create a Zoom meeting
+<ul>
+<li> go to Zoom's website <a href="https://uit.stanford.edu/service/zoom">here</a>
+<li> click on "Launch Zoom"
+<li> click on "Host a meeting" 
+<li> a pop-up window might open: click on "Open zoom.us"
+<li> another pop-up window might open: click on "Join audio conference by computer" 
+<li> your Zoom meeting has been created, and a Zoom meeting window should appear
+</ul>
+<li>2) Get the invitation URL of your Zoom meeting
+<ul>
+<li>- in your Zoom meeting window, click on "Invite" 
+<li>- click on "Copy URL"
+</ul>
+<li>3) Go to Queue Status' website <a href="http://queuestatus.com/queues/332">here</a>
+<li> 4) Add your name and the invitation URL of your Zoom meeting on Queue Status. Please also provide a very short description of your question (e.g. "HW3 problem 3 (a)" or "Lecture 2 Big-O notation"). 
+<li> 5) Wait in line, until it is your turn. When it is your turn, at CA will join your Zoom meeting!  
+</ul>
+<li> For any issues with SCPD, please
+email <a href="mailto:cs161-win1819-staff@lists.stanford.edu">cs161-win1819-staff@lists.stanford.edu</a>.
+</ul>
+        </div>
+	</div>
+		
+		<div class="w3-card w3-sand w3-margin">
+    	<div class="w3-container w3-flat-pomegranate">
+        <h4 id="other"> Other Resources </h4>
+        </div>
+        <div class="w3-container">
+       <p> If you need a <a href="joy.html">pick-me-up.</a>
+        </div>
+	</div>
+	
+	
+  </div>
+
+
+  <!-- Pagination 
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a class="w3-button w3-black" href="#">1</a>
+      <a class="w3-button w3-hover-black" href="#">2</a>
+      <a class="w3-button w3-hover-black" href="#">3</a>
+      <a class="w3-button w3-hover-black" href="#">4</a>
+      <a class="w3-button w3-hover-black" href="#">5</a>
+      <a class="w3-button w3-hover-black" href="#">»</a>
+    </div>
+  </div>
+  -->
+
+  <footer id="myFooter">
+    <div class="w3-container w3-theme-l2 w3-padding-32">
+      <p> </p>
+    </div>
+
+    <div class="w3-container w3-theme-l1">
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </div>
+  </footer>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+    if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+        overlayBg.style.display = "none";
+    } else {
+        mySidebar.style.display = 'block';
+        overlayBg.style.display = "block";
+    }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+    overlayBg.style.display = "none";
+}
+</script>
+
+</body>
+</html>

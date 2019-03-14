@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<title>CS 161</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="w3-theme-brownish.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+    <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-theme-l1">CS 161</a>
+     <a href="https://www.gradescope.com/courses/34849" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Gradescope</a>
+      <a href="http://piazza.com/stanford/winter2019/cs161" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Piazza</a>
+      <a href="resources.html#homework" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Homework Resources</a>
+  </div>
+</div>
+
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5" style="z-index:3;width:250px;margin-top:43px;" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4 class="w3-bar-item"><b>CS161</b></h4>
+    <a class="w3-bar-item w3-button w3-hover-black" href="index.html">Home</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="schedule.html">Lectures</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="section.html">Sections</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="homework.html">Homework</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="exams.html">Exams</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="resources.html">Resources</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="policies.html">Policies</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="staff.html">Staff/Office Hours</a>
+  <h4 class="w3-bar-item"><b>Important Dates</b></h4>
+  <ul>
+  <li> Midterm: 2/20, in-class</li>
+  <li> Final: 3/21, 8:30am</li>
+  </ul>
+</nav>
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+
+  <div class="w3-row w3-padding-64">
+    <div class="w3-container">
+      <h1 class="w3-text-deep-orange">Homework</h1>
+      
+	<div class="w3-card w3-sand w3-margin">
+    	<div class="w3-container w3-flat-orange">
+        <h4> Homework Logistics </h4>
+        </div>
+        <div class="w3-container">
+      <ul>
+      	<li>Homework is to be handed in via <a href="https://www.gradescope.com/courses/34849">GradeScope.</a>  Access code 92P3G8.</li>
+	<li>The homework schedule is <a href="schedule.html#schedule">here.</a>  (Bottom of the page).
+      	<li>Please adhere to the <a href="policies.html">collaboration policies</a>.  In brief:
+      		<ul>
+      			<li> We recommend that you complete the ``Exercises" section on your own.
+      			<li> Collaboration with fellow CS-161-ers is fine on the ``Problems" section, but (a) you must give credit to those you worked with, and (b) you must type up your own solutions <b> from scratch</b>.
+      		</ul>
+      		<li> Homework solutions <b> must be typed</b>, and submitted as a PDF.  See the <a href=resources.html> Resources </a> section for help on typesetting mathematical writing, as well as a LaTeX template for homework.
+      		<li> Your solutions will be graded by a human; respect that human.   Make sure that your solutions are organized and use complete sentences.  It's not a good idea to turn in your first draft.  See the <a href=resources.html> Resources </a> section for more homework tips and an example solution set.
+			<li> See the <a href=Lectures/Lecture2/preLecture2.pdf>pre-lecture exercise for Lecture 2</a> for instructions on installing Jupyter Notebooks with Python and see the <a href="resources.html">resources</a> section for Python help.  All IPython notebooks will be using Python 3. 
+      </ul>
+      </div>
+	</div>
+ 
+
+	<div class="w3-card w3-sand w3-margin">
+    	<div class="w3-container w3-flat-pomegranate">
+        <h4> Homework 1 </h4>
+        </div>
+        <div class="w3-container">
+        <ul>
+            <li>Due: Friday January 18 at 3pm. </li>
+            <li> <a href=Homework/Homework1/HW1_pset.pdf>Problem Set</a></li>
+            <li> <a href=Homework/Homework1/HW1_sols.pdf>Solutions</a></li>
+            <li> <a href=Homework/Homework1/HW1.ipynb download="HW1.ipynb">IPython Notebook</a></li>
+            <li> <a href=Homework/Homework1/HW1_pset.tex>LaTeX source</a> and <a href=Homework/Homework1/squirrel.png>squirrel image</a> (in case you want them).</li>
+         </ul>
+        </div>
+	</div>
+	
+	<div class="w3-card w3-sand w3-margin">
+    	<div class="w3-container w3-flat-pomegranate">
+        <h4> Homework 2 </h4>
+        </div>
+        <div class="w3-container">
+        <ul>
+            <li>Due: Friday January 25 at 3pm. </li>
+            <li> <a href=Homework/Homework2/HW2_pset.pdf>Problem Set</a></li>
+            <li> <a href=Homework/Homework2/HW2_sols.pdf>Solutions</a></li>
+	    <li> <a href=Homework/Homework2/HW2_pset.tex>LaTeX source</a> and <a href="Homework/Homework2/penguin.png">penguin image</a> (in case you want them).</li>
+         </ul>
+        </div>
+	</div>
+	
+	<div class="w3-card w3-sand w3-margin">
+    	<div class="w3-container w3-flat-pomegranate">
+        <h4> Homework 3 </h4>
+        </div>
+        <div class="w3-container">
+        <ul>
+            <li>Due: Friday February 8 at 3pm. </li>
+            <li> <a href=Homework/Homework3/HW3_pset.pdf>Problem Set</a></li>
+	    <li> <a href=Homework/Homework3/HW3_pset.tex>LaTeX source</a> and <a href="Homework/Homework3/imgs.zip">images</a> (in case you want them).</li>
+            <li> <a href=Homework/Homework3/HW3.ipynb download="HW3.ipynb">IPython Notebook</a></li>
+            <li> <a href=Homework/Homework3/HW3aux.py download="HW3aux.py">Auxiliary .py file</a> (put in same directory as HW3.ipynb when you run it).</li>
+	     <li><a href=Homework/Homework3/HW3_sols.pdf>Solution Set</a></li>
+         </ul>
+        </div>
+	</div>
+	<div class="w3-card w3-sand w3-margin">
+    	<div class="w3-container w3-flat-pomegranate">
+        <h4> Homework 4 </h4>
+        </div>
+        <div class="w3-container">
+        <ul>
+            <li>Due: Friday February 15 at 3pm. </li>
+            <li> <a href=Homework/Homework4/HW4_pset.pdf>Problem Set</a></li>
+	    <li> <a href=Homework/Homework4/HW4_pset.tex>LaTeX source</a> and <a href="Homework/Homework4/images.zip">images</a> (in case you want them). </li>
+	    <li><a href=Homework/Homework4/HW4_sols.pdf>Solution Set</a></li>
+
+         </ul>
+        </div>
+	</div>
+	
+	<div class="w3-card w3-sand w3-margin">
+    	<div class="w3-container w3-flat-pomegranate">
+        <h4> Homework 5 </h4>
+        </div>
+        <div class="w3-container">
+        <ul>
+            <li>Due: Friday March 1 at 3pm. </li>
+            <li> <a href=Homework/Homework5/HW5_pset.pdf>Problem Set</a></li>
+	    <li> <a href=Homework/Homework5/HW5_pset.tex>LaTeX source</a> and <a href="Homework/Homework5/sheep.png">sheep image</a> (in case you want them).</li>
+	    <li><a href=Homework/Homework5/HW5_sols.pdf>Solution Set</a></li>
+          <!--  <li> <a href=Homework/Homework5/HW5.ipynb>IPython Notebook</a></li>
+            <li> <a href=Homework/Homework5/graphStuff.py>graphStuff.py</a> (this is our CS161Graph implementation)</li>
+            <li> <a href=Homework/Homework5/HW5_mysteryA.pickle>mystery A (pickle file)</a></li>
+            <li> <a href=Homework/Homework5/HW5_mysteryB.pickle>mystery B (pickle file)</a></li>
+	    <li> <a href=Homework/Homework5/HW5_allPythonFiles.zip>All of the python code in a zip file</a></li>-->
+         </ul>
+        </div>
+	</div>
+	
+	<div class="w3-card w3-sand w3-margin">
+    	<div class="w3-container w3-flat-pomegranate">
+        <h4> Homework 6 </h4>
+        </div>
+        <div class="w3-container">
+        <ul>
+            <li>Due: Friday March 8 at 3pm. </li>
+            <li> <a href=Homework/Homework6/HW6_pset.pdf>Problem Set</a></li>
+	    <li> <a href=Homework/Homework6/HW6_pset.tex>LaTeX source</a> and <a href="Homework/Homework6/images.zip">images</a> (in case you want them).
+	    <!--<li> <a href=Homework/Homework6/HW6_sols.pdf>Solution Set</a></li>-->
+         </ul>
+        </div>
+	</div>
+	
+<!--	
+	<div class="w3-card w3-sand w3-margin">
+    	<div class="w3-container w3-flat-pomegranate">
+        <h4> Homework 7 </h4>
+        </div>
+        <div class="w3-container">
+        <ul>
+            <li>Due: Friday December 1 at 3pm </li>
+            <li> <a href=Homework/Homework7/HW7.pdf>Problem Set</a></li>
+            <li> <a href=Homework/Homework7/HW7_pset.tex>LaTeX source</a></li>
+	    <li> <b>Update 11/28:</b> We have added a hint for Problem 3(a).
+	    <li> <b>Update 11/30:</b> For exercise 2, we added the assumption that the sum of the q_i is at least Q.
+            <li> <a href=Homework/Homework7/HW7_sols.pdf>Solution Set</a></li>
+         </ul>
+        </div>
+	</div>
+-->
+
+</div>
+  <footer id="myFooter">
+    <div class="w3-container w3-theme-l2 w3-padding-32">
+      <p> </p>
+    </div>
+
+    <div class="w3-container w3-theme-l1">
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </div>
+  </footer>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+    if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+        overlayBg.style.display = "none";
+    } else {
+        mySidebar.style.display = 'block';
+        overlayBg.style.display = "block";
+    }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+    overlayBg.style.display = "none";
+}
+</script>
+
+</body>
+</html>

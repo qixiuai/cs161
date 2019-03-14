@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<title>CS 161</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="w3-theme-brownish.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-theme-l1">CS 161</a>
+     <a href="https://communitystandards.stanford.edu/student-conduct-process/honor-code-and-fundamental-standard" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Stanford Honor Code</a>
+  </div>
+</div>
+
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5" style="z-index:3;width:250px;margin-top:43px;" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4 class="w3-bar-item"><b>CS161</b></h4>
+    <a class="w3-bar-item w3-button w3-hover-black" href="index.html">Home</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="schedule.html">Lectures</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="section.html">Sections</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="homework.html">Homework</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="exams.html">Exams</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="resources.html">Resources</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="policies.html">Policies</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="staff.html">Staff/Office Hours</a>
+  <h4 class="w3-bar-item"><b>Important Dates</b></h4>
+  <ul>
+  <li> Midterm: 2/20, in-class</li>
+  <li> Final: 3/21, 8:30am</li>
+  </ul>
+</nav>
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+
+  <div class="w3-row w3-padding-64">
+    <div class="w3-container">
+      <h1 class="w3-text-deep-orange">Course policies  </h1>  
+    </div>
+    
+
+	<div class="w3-card w3-sand w3-margin">
+    	<div class="w3-container w3-flat-pomegranate">
+        <h4> Collaboration Policy </h4>
+        </div>
+        <div class="w3-container">
+                 <p>The homework assignments will have two sections: Exercises and Problems.  
+We recommend that you complete the Exercises on your own.  (But if you happen to chat about them with a fellow CS161 student that's okay; please acknowledge your collaborators).
+The Problems can be completed in small groups of current CS161 students (up to four).  In both cases, <b> you must type up your own solutions, </b> and for each problem you must list the students you collaborated with.
+                 <ul>
+                 	<li> The following is <b>OK</b>: You and your friend work through the problems together over a couple of days.  You bounce ideas off each other, and eventually come up with a pretty good solution idea.  You sit down at your computer and type up that idea in your own words, perhaps lightly consulting notes you took while working with your friend.
+                 	<li> The following is <b>NOT OK</b>: You and your friend work through the problems together over a couple of days.  You bounce ideas off each other, and eventually come up with a pretty good solution idea.   Your friend types up their solutions first; since you helped come up with the answers, you use your friend's write-up as a starting point for your own.
+                 	<li> A good test: if you ever share your typed-up solutions, or if someone shares theirs with you, it is probably <b>NOT OKAY.    </b>
+                 </ul>
+        </div>
+	</div>
+	
+	<div class="w3-card w3-sand w3-margin">
+    	<div class="w3-container w3-flat-pomegranate">
+        <h4> Regrade Policy </h4>
+        </div>
+        <div class="w3-container">
+                 <p> We all make mistakes, even when grading.  You may submit a regrade request for homework on Gradescope.  Please include a thorough description of the error that the grader made.  
+You must submit a regrade assignment within one week of having your graded work returned, by the end of day (i.e. 11:59 PM).
+Some notes:
+                 <ul>
+                 	<li> We will <b> regrade the entire assignment </b> on a regrade request.  This means you may lose more points on other problems if we discover grading errors in the other direction.
+                 	<li> Your regrade request will go to the TA who graded your work originally, as well as to the instructor. 
+                 	<li> Legitimate regrade requests include: 
+                 	<ul>
+                 		<li> The points were not added correctly.
+                 		<li> The comments say I'm missing part (c), but it was actually on a different page.
+                 		<li> The comments say that my algorithm is incorrect on this case, but I implemented my algorithm and it does work in that case.
+                 	</ul>
+                 	<li> Illegitimate regrade requests include:
+                 	<ul>
+                 	    <li> I disagree with the rubric; I should have gotten more partial credit for my solution.
+                 	    <li> I understand that my solution wasn't clear, but what I <i>meant</i> to say was correct.
+                 	</ul>
+                 </ul>
+        </div>
+	</div>	
+	
+		<div class="w3-card w3-sand w3-margin">
+    	<div class="w3-container w3-flat-pomegranate">
+        <h4> Late Homework and Missed Exams Policy </h4>
+        </div>
+        <div class="w3-container">
+                 <p> <b> Homework: </b> You have <b> six late days </b> to distribute as you like among the seven homework assignments, with a maximum of two per assignment.  
+Each late day is an extension of 24 hours.  So if the assignment is due Friday at 3pm, you may hand it in by Saturday at 3pm and use one late day, or by Sunday at 3pm and use two late days. 
+<b> You are responsible for keeping track of your late days! </b>  You can always ask to find out how many you have left.
+
+<p>
+No credit will be given for homework turned in two days after the due date, or for late homework after all late days have been used.
+Please email 
+<a href="mailto:cs161-win1819-staff@lists.stanford.edu">cs161-win1819-staff@lists.stanford.edu</a>  
+for special circumstances.
+                 <p> <b> Exams: </b> Please do not miss the exams!  If you know you will have a conflict, email 
+<a href="mailto:cs161-win1819-staff@lists.stanford.edu">cs161-win1819-staff@lists.stanford.edu</a>  ASAP.
+        </div>
+	</div>	
+	
+	<div class="w3-card w3-sand w3-margin">
+    	<div class="w3-container w3-flat-pomegranate">
+        <h4> Course Grade Policy </h4>
+        </div>
+        <div class="w3-container">
+                 <p> The elements of your grade are:
+                 <ul>
+                 	<li> 7 homework assignments (35%)
+                 	<li> Midterm (25%)
+                 	<li> Final Exam (40%)
+                 	<li> Bonus Points (see Bonus Point Policy below).
+                 </ul> 
+                 <p> Your score on each assignment will be normalized to become
+                 a number (points scored)/(points possible) between 0 and 1, and
+                 these numbers will be added together with the above weights to
+                 obtain your final numerical grade.  The numerical grade will be
+                 converted to a letter grade at the end of the course, based on
+                 the distribution within the class and the <a
+                 href="https://carta.stanford.edu/course/CS161/1182">historical grade distribution for CS161</a>.  
+
+		<p> After your final numerical grade and letter grade has been computed, the Bonus Point Policy (below) will be enacted, which can boost your final letter grade.
+        </div>
+	</div>		
+		
+	<div class="w3-card w3-sand w3-margin">
+    	<div class="w3-container w3-flat-pomegranate">
+        <h4> Bonus Point Policy </h4>
+        </div>
+        <div class="w3-container">
+                 <p> Throughout the quarter, there will be opportunities to get "bonus points" (for example, extra problems on homework sets, the Bug Bounty Policy below; we will also award a bonus point for extremely nice solutions to normal homework problems).  These points are not officially worth anything.  However, at the end of the quarter, if your numerical grade puts you near to a letter-grade cut-off then if you have lots of bonus points (compared to your classmates) you may be "bumped" above the cut-off.  (You cannot be bumped down.)
+                 For example, if your numerical grade is 0.81 and the cut-off for an A- is 0.82, then bonus points could promote you from a B+ to an A-.
+        </div>
+	</div>		
+	
+	<div class="w3-card w3-sand w3-margin">
+    	<div class="w3-container w3-flat-pomegranate">
+        <h4> Bug Bounty Policy </h4>
+        </div>
+        <div class="w3-container">
+		<p> We hope that all course materials are bug-free.  <b> However, </b> if you find an error in course materials (slides, iPython notebooks, or PSETs), point it out to us! (Email marykw or post on Piazza).  The first finder of each error (that affects understanding) will get one bonus point.  (See above for how bonus points will be applied). 
+		<p> "Errors that affect understanding" include pretty much anything other than little tpyos in wrds -- although we'd be grateful if you point those out too.  For example, if there is incorrect arithmetic on a slide, or indexing errors in pseudocode, or a conceptual error (without a disclaimer), or if there's some piece of crucial information that's missing from a problem, those all count as errors that affect understanding.  Please point these out to us!  You'll help us, your classmates, and yourself (via bonus points).  It's a win-win-win situation!
+        </div>
+	</div>		
+	
+	
+		<div class="w3-card w3-sand w3-margin">
+    	<div class="w3-container w3-flat-pomegranate">
+        <h4> Course Policies Policy </h4>
+        </div>
+        <div class="w3-container">
+                 <p> Course policies must adhere to course policies.  (This is a joke).
+        </div>
+	</div>		
+	
+	
+  </div>
+
+
+  <!-- Pagination 
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a class="w3-button w3-black" href="#">1</a>
+      <a class="w3-button w3-hover-black" href="#">2</a>
+      <a class="w3-button w3-hover-black" href="#">3</a>
+      <a class="w3-button w3-hover-black" href="#">4</a>
+      <a class="w3-button w3-hover-black" href="#">5</a>
+      <a class="w3-button w3-hover-black" href="#">»</a>
+    </div>
+  </div>
+  -->
+
+  <footer id="myFooter">
+    <div class="w3-container w3-theme-l2 w3-padding-32">
+      <p> </p>
+    </div>
+
+    <div class="w3-container w3-theme-l1">
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </div>
+  </footer>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+    if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+        overlayBg.style.display = "none";
+    } else {
+        mySidebar.style.display = 'block';
+        overlayBg.style.display = "block";
+    }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+    overlayBg.style.display = "none";
+}
+</script>
+
+</body>
+</html>
